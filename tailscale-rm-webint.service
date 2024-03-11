@@ -1,0 +1,13 @@
+[Unit]
+Description=View the web interface if running, over tailscale 
+StartLimitIntervalSec=600
+StartLimitBurst=4
+After=home.mount
+
+[Service]
+Type=simple
+Restart=on-failure
+ExecStart=/opt/bin/tailscale-rm-webint
+
+[Install]
+WantedBy=multi-user.target
