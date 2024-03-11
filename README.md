@@ -44,3 +44,9 @@ with the contents:
 ```toml
 port=8080
 ```
+
+Then run:
+
+```bash
+$ systemctl restart tailscale-rm-webint
+```
